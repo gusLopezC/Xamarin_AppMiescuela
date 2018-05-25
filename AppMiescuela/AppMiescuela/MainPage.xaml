@@ -3,12 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AppMiescuela"
              x:Class="AppMiescuela.MainPage">
-
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Margin="5" Source="image_6.png"/>
+        <StackLayout Grid.Row="1">
+            <Label Text="Usuario" HorizontalOptions="Center"/>
+            <Entry x:Name="txbUsuario" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" Placeholder="usuario@correo.com" Keyboard="Email"/>
+            <Label Text="Contraseña" HorizontalOptions="Center"/>
+            <Entry x:Name="pswClave" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" IsPassword="True"/>
+        </StackLayout>
+        <StackLayout Grid.Row="2">
+            <Button Style="{StaticResource btnAceptar}" Text="Iniciar Sesión" x:Name="btnIniciarSesion" />
+            <Button Style="{StaticResource btnGuardar}" Text="Crear Cuenta" x:Name="btnCrearCuenta" />
+        </StackLayout>
+    </Grid>
 
 </ContentPage>
