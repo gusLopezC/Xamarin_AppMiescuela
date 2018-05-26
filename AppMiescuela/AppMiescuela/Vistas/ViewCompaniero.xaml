@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMiescuela.Vistas.ViewCompaniero">
+    <ContentPage.Content>
+        <Grid x:Name="Contenedor">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Label Text="Nombre" Grid.Column="0" Grid.Row="0"/>
+            <Label Text="Apellidos" Grid.Column="0" Grid.Row="1"/>
+            <Label Text="Teléfono" Grid.Column="0" Grid.Row="2"/>
+            <Label Text="Email" Grid.Column="0" Grid.Row="3"/>
+
+            <Entry x:Name="txbNombre" Text="{Binding Nombre}" Placeholder="Nombre" Keyboard="Text" Grid.Column="1" Grid.Row="0"/>
+            <Entry Text="{Binding Apellidos}" Grid.Column="1" Placeholder="Apellidos" Keyboard="Text" Grid.Row="1"/>
+            <Entry Text="{Binding Telefono}"   Placeholder="7731234567" Keyboard="Telephone" Grid.Column="1" Grid.Row="2"/>
+            <Entry Text="{Binding Email}"  Placeholder="correo@email.com" Keyboard="Email" Grid.Column="1" Grid.Row="3"/>
+
+            <Button x:Name="btnGuardar" Style="{StaticResource btnGuardar}" Text="Guardar" Grid.Column="0" Grid.Row="4"/>
+            <Button x:Name="btnEliminar" Style="{StaticResource btnEliminar}" Text="Eliminar" Grid.Column="1" Grid.Row="4"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

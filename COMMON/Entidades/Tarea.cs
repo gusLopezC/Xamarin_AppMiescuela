@@ -15,5 +15,13 @@ namespace COMMON.Entidades
         public bool Entregada { get; set; }
         public string Descripcion { get; set; }
         public ObjectId IdMateria { get; set; }
+
+
+        public override string ToString()
+        {
+            return Titulo +", "+Descripcion+  ": " + FechaEntrega;
+        }
     }
+
+
 }
